@@ -4,7 +4,7 @@ import { dependencies } from "./package.json";
 export const mfConfig: ModuleFederationOptions = {
   name: "host",
   remotes: {
-    // remote: "remote@http://localhost:3001/mf-manifest.json"
+    remote: "remote@http://localhost:3001/mf-manifest.json"
   },
   shared: {
     ...dependencies,

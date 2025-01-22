@@ -1,4 +1,4 @@
-import { Link, NavLink, Outlet } from "react-router";
+import { NavLink, Outlet } from "react-router";
 
 const App = () => {
   return (
@@ -12,7 +12,7 @@ const App = () => {
           >
             Build Time Remote
           </NavLink>
-          <NavLink to="/run-time">Runtime Remote</NavLink>
+          <NavLink to="/dynamicRemote">Runtime Remote</NavLink>
         </div>
       </div>
       <div className="p-4">

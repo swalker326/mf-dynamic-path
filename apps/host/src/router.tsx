@@ -32,17 +32,15 @@ const router = createBrowserRouter([{ path: "/", element: <App /> }], {
     } else {
       // fetch remote from zephyr
       // how do I mount a remote to the host without redeploying the host?
-      
-      console.log("BEFORE REGISTER REMOTES");
+      // we're stuck here, how do we get this info `http://localhost:3003/remoteEntry.js` from zephyr?
       await registerRemotes([
         {
-          name: "dynamicRemote",
+          name: path.split("/")[1],
           entry: "http://localhost:3003/remoteEntry.js"
         }
       ]);
       const instance = getInstance();
       console.log("INSTANCE", instance);
-      console.log("BEFORE LOAD REMOTE");
       const module = await loadRemote("dynamicRemote/routes");
 
       console.log("MODULE", module);
